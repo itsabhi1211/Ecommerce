@@ -1,0 +1,185 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="E_Commerce.Admin.master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- MORRIS CHART STYLES-->
+    <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <!-- CUSTOM STYLES-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager ID="sc" runat="server"></asp:ScriptManager>
+        <div id="wrapper">
+            <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="Dashboard.aspx">Admin Panel</a>
+                </div>
+                <div class="btn-group pull-left" style="color: white; padding: 15px 50px 5px 50px; float: left; font-size: 16px;">
+                    <b>Welcome:</b>&nbsp;<asp:Label ID="lblname" runat="server" Font-Bold="true"></asp:Label>&nbsp;
+                </div>
+                <div class="btn-group pull-right" style="color: white; padding: 15px 50px 5px 50px; float: left; font-size: 16px;">
+                    <asp:Label ID="lblregno" runat="server" Font-Bold="true" ForeColor="Red" Font-Size="12px"></asp:Label>
+                    &nbsp; 
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle pull-right" data-toggle="dropdown">
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                    <ul class="dropdown-menu slidedown">
+                        <li>
+                            <a href="user-profile.aspx">
+                                <i class="fa fa-user fa-fw"></i>Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="change-password.aspx">
+                                <i class="fa fa-lock fa-fw"></i>Change Password
+                            </a>
+                        </li>
+
+                        <li class="divider"></li>
+                        <li>
+                            <a data-toggle="modal" data-target="#myModal">
+                                <i class="fa fa-sign-out fa-fw"></i>Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <%--  <div style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;">
+                    Last access : 30 May 2014 &nbsp; 
+                </div>--%>
+            </nav>
+            <!-- /. NAV TOP  -->
+            <nav class="navbar-default navbar-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav" id="main-menu">
+                        <li class="text-center">
+                            <img src="assets/img/find_user.png" class="user-image img-responsive" id="adminpic" runat="server" style="width: 100px; height: 100px" />
+                        </li>
+
+
+                        <li>
+                            <a class="active-menu" href="Dashboard.aspx"><i class="fa fa-dashboard"></i>Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-user"></i>User Management<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="user-profile.aspx">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="change-password.aspx">Change Password</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                    
+
+                        <li>
+                            <a href="#"><i class="fa fa-briefcase"></i>Items<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="add-category.aspx">Add Item Category</a>
+                                </li>
+                                <li>
+                                    <a href="add-items.aspx">Add Items</a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-list-alt"></i>Orders<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="approve-orders.aspx">Recent Orders</a>
+                                </li>
+                                <li>
+                                    <a href="delivered-orders.aspx">Delivered Orders</a>
+                                </li>
+
+
+
+                            </ul>
+
+                        </li>
+
+                        <li>
+                            <a href="contact-us.aspx"><i class="fa fa-comment-o"></i>Contact Us<span class="fa arrow"></span></a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+            </nav>
+            <!-- /. NAV SIDE  -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog" style="width: 450px">
+                    <div class="modal-content modal-open">
+                        <div class="modal-header bg-primary">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Confirm</h4>
+                        </div>
+                        <div class="modal-body">
+                            <h4 style="font-weight: bolder">Are You Sure You Want To Logout...</h4>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+
+                            <asp:Button ID="btnlogout" runat="server" class="btn btn-primary" Text="Logout" OnClick="btnlogout_Click" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <asp:ContentPlaceHolder ID="head" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <!-- /. PAGE WRAPPER  -->
+        </div>
+        <!-- /. WRAPPER  -->
+        <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+        <!-- JQUERY SCRIPTS -->
+        <script src="assets/js/jquery-1.10.2.js"></script>
+        <!-- BOOTSTRAP SCRIPTS -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- METISMENU SCRIPTS -->
+        <script src="assets/js/jquery.metisMenu.js"></script>
+        <!-- MORRIS CHART SCRIPTS -->
+        <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
+        <script src="assets/js/morris/morris.js"></script>
+        <!-- CUSTOM SCRIPTS -->
+        <script src="assets/js/custom.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                setTimeout(function () {
+                    $("[id$=lblmsg]").fadeOut("fast");
+                }, 4000);
+            });
+        </script>
+
+    </form>
+
+</body>
+</html>

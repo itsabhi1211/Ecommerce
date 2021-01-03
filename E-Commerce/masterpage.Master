@@ -1,0 +1,274 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterpage.master.cs" Inherits="E_Commerce.masterpage" %>
+
+<!DOCTYPE html>
+
+<html lang="zxx">
+<head>
+    <title>DIVISIMA</title>
+    <meta charset="UTF-8">
+    <meta name="description" content=" Divisima | eCommerce Template">
+    <meta name="keywords" content="divisima, eCommerce, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+
+    <!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager ID="sc" runat="server"></asp:ScriptManager>
+
+        <!-- Page Preloder -->
+        <div id="preloder">
+            <div class="loader"></div>
+        </div>
+
+        <!-- Header section -->
+        <header class="header-section">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2 text-center text-lg-left">
+                            <!-- logo -->
+                            <a href="Homepage.aspx" class="site-logo">
+                                <img src="img/logo.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-xl-3 col-lg-5">
+                        </div>
+                        <div class="col-xl-7 col-lg-5 text-right">
+                            <div class="user-panel">
+                                <div class="up-item" runat="server" id="regdiv">
+                                    <i class="flaticon-profile"></i>
+                                    <a href="sign-up.aspx">Create Buyer Account</a>
+                                </div>
+                                <div class="up-item" runat="server" id="sellerregdiv">
+                                    <i class="flaticon-profile"></i>
+                                    <a href="Seller-SignUp.aspx">Create Seller Account</a>
+                                </div>
+
+                                <div class="up-item" runat="server" id="shoppingdiv">
+                                    <a href="cart.aspx">
+                                        <div class="shopping-card">
+                                            <i class="flaticon-bag"></i>
+                                            <span>
+                                                <asp:Label ID="lblcount" runat="server"></asp:Label></span>
+                                        </div>
+                                        Cart</a>
+                                </div>
+                                <div class="up-item" runat="server" id="lbldiv" visible="false">
+                                    <asp:HyperLink href="Customer/recent-orders.aspx" ID="hpyname" runat="server" CssClass="text-danger" Font-Size="Larger" Font-Bold="true"></asp:HyperLink>
+                                </div>
+                                &nbsp;  
+                                <div class="up-item" runat="server" id="logoutdiv" visible="false">
+                                    <asp:HyperLink ID="hdflogout" Text="Logout" runat="server" CssClass="text-dark" Font-Size="Larger" Font-Bold="true" data-toggle="modal" data-target="#modallogout" href=""></asp:HyperLink>
+                                </div>
+                                <div class="up-item" runat="server" id="admindiv">
+                                    <a href="admin-login.aspx">
+                                        <div class="fa fa-lock fa-2x">
+                                        </div>
+                                        Seller Login</a>
+                                </div>
+                                &nbsp;    &nbsp;
+                             
+
+                                <div class="up-item" runat="server" id="logindiv">
+                                    <a href="customer-login.aspx">
+                                        <div class="fa fa-lock fa-2x">
+                                        </div>
+                                        Customer Login</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-navbar">
+                <div class="container">
+                    <!-- menu -->
+                    <ul class="main-menu">
+                        <li><a href="Homepage.aspx">Home</a></li>
+                        <li><a href="list-items.aspx">Items</a></li>
+                        <li><a href="about-us.aspx">About Us</a></li>
+                        <li><a href="contact-us.aspx">Contact Us</a></li>
+                        <%-- <li><a href="#">Jewelry
+						<span class="new">New</span>
+                        </a></li>
+                        <li><a href="#">Shoes</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Sneakers</a></li>
+                                <li><a href="#">Sandals</a></li>
+                                <li><a href="#">Formal Shoes</a></li>
+                                <li><a href="#">Boots</a></li>
+                                <li><a href="#">Flip Flops</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Pages</a>
+                            <ul class="sub-menu">
+                                <li><a href="./product.html">Product Page</a></li>
+                                <li><a href="./category.html">Category Page</a></li>
+                                <li><a href="./cart.html">Cart Page</a></li>
+                                <li><a href="./checkout.html">Checkout Page</a></li>
+                                <li><a href="./contact.html">Contact Page</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Blog</a></li>--%>
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+        <!-- Header section end -->
+
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+
+
+        <!-- Footer section -->
+        <section class="footer-section">
+            <div class="container">
+                <div class="footer-logo text-center">
+                    <a href="index.html">
+                        <img src="./img/logo-light.png" alt=""></a>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer-widget about-widget">
+                            <h2>About</h2>
+                            <p>There are plenty of benefits of having an E-commerce website for your business – and these benefit not only you, the business owner, but also your customers.</p>
+                            <img src="img/cards.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer-widget about-widget">
+                            <h2>Links</h2>
+                            <ul>
+                                <li><a href="Homepage.aspx">Homepage</a></li>
+                                <li><a href="contact-us.aspx">Contact Us</a></li>
+
+                            </ul>
+                            <ul>
+                                <li><a href="list-items.aspx">Items</a></li>
+                                <li><a href="about-us.aspx">About Us</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer-widget about-widget">
+                            <h2>Items</h2>
+                            <div class="fw-latest-post-widget">
+                                <div class="lp-item">
+                                    <div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/1.jpg"></div>
+                                    <div class="lp-content">
+                                        <h6>what shoes to wear</h6>
+                                        <span><%= System.DateTime.Now.ToString("dd-MM-yyyy") %></span>
+                                        <a href="#" class="readmore">Read More</a>
+                                    </div>
+                                </div>
+                                <div class="lp-item">
+                                    <div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/2.jpg"></div>
+                                    <div class="lp-content">
+                                        <h6>trends this year</h6>
+                                        <span><%= System.DateTime.Now.ToString("dd-MM-yyyy") %></span>
+                                        <a href="#" class="readmore">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer-widget contact-widget">
+                            <h2>Address</h2>
+                            <div class="con-info">
+                                <span>C.</span>
+                                <p>Divisima Ltd </p>
+                            </div>
+                            <div class="con-info">
+                                <span>B.</span>
+                                <p>192-168 B-1 Telibagh, Lucknow </p>
+                            </div>
+                            <div class="con-info">
+                                <span>T.</span>
+                                <p>+91 9999333322</p>
+                            </div>
+                            <div class="con-info">
+                                <span>E.</span>
+                                <p>officediv@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Footer section end -->
+        <div class="modal fade " id="modallogout" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center bg-dark">
+                        <h5 class="modal-title text-center" style="color: white; font-weight: 700"><i class="fa fa-list"></i>&nbsp;Ready To Leave ?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="promo-code-form">
+                            <div class="form-group text-left">
+
+                                <asp:Label runat="server" CssClass="text-danger" ID="Label4" Font-Bold="true" Font-Size="Large" Text="Select Logout below if you are ready to end your current session."></asp:Label>
+
+
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="modal-footer">
+
+
+                        <asp:Button ID="btnlogout" runat="server" CssClass="site-btn submit-order-btn" Text="Logout" OnClick="btnlogout_Click" UseSubmitBehavior="false" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--====== Javascripts & Jquery ======-->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.slicknav.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.nicescroll.min.js"></script>
+        <script src="js/jquery.zoom.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/main.js"></script>
+    </form>
+</body>
+</html>
