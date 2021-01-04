@@ -55,7 +55,7 @@ to make product(s) that are **_functional, fast, beautiful, useable and reliable
 * Cart module
 * Database
 
-## Steps To Execute the solution (Usage):-
+## Steps To Execute the Solution (Usage):-
 1. Download the Project.
 2. Run database file (script.sql).
 3. Change connection String in Web.config.
