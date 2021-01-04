@@ -82,5 +82,5 @@ to make product(s) that are **_functional, fast, beautiful, useable and reliable
 <img src="">
 <img src="">
 <img src="">
-#### 13. You can see the order details on Orders. 
+#### 13. You can  see the order details on Orders. 
 <img src=" ">
