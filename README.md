@@ -59,7 +59,7 @@ to make product(s) that are **_functional, fast, beautiful, useable and reliable
 1. Download the Project.
 2. Run database file (script.sql).
 3. Change connection String in Web.config.
-<img src="">
+<img src="newfolder/ss1.png">
 4. Build the Project and start from Homepage.aspx .
 <img src="">
 5. Create Seller Account and fill details and get signup.
