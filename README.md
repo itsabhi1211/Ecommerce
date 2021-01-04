@@ -56,31 +56,31 @@ to make product(s) that are **_functional, fast, beautiful, useable and reliable
 * Database
 
 ## Steps To Execute the solution (Usage):-
-**1.** Download the Project.
-**2.** Run database file (script.sql).
-**3.** Change connection String in Web.config.
+#### 1. Download the Project.
+#### 2. Run database file (script.sql).
+#### 3. Change connection String in Web.config.
 <img src="">
-**4.** Build the Project and start from Homepage.aspx .
+#### 4. Build the Project and start from Homepage.aspx .
 <img src="">
-**5.** Create Seller Account and fill details and get signup.
+#### 5. Create Seller Account and fill details and get signup.
 <img src="">
-**6.** Update your Seller Profile.
+#### 6. Update your Seller Profile.
 <img src="">
-**7.** Add Item Category Type.
+#### 7. Add Item Category Type.
 <img src="">
-**8.** Add Item that will show on homepage.
+#### 8. Add Item that will show on homepage.
 <img src="">
-**9.** See Order details and approve that orders also marked them as delivered.
+#### 9. See Order details and approve that orders also marked them as delivered.
 <img src="">
-**10.** Create Buyer Account, fill necessary details and sign up.
+#### 10. Create Buyer Account, fill necessary details and sign up.
 <img src="">
-**11.** Go to items and you can see all the items available for sell but you can purchase only those item that is available in your city.
-<img src="">
-<img src="">
-<img src="">
-**12.** Now You are able to place your order.
+#### 11. Go to items and you can see all the items available for sell but you can purchase only those item that is available in your city.
 <img src="">
 <img src="">
 <img src="">
-**13.** 
+#### 12. Now You are able to place your order.
+<img src="">
+<img src="">
+<img src="">
+#### 13. You can see the order details on Orders. 
 <img src=" ">
