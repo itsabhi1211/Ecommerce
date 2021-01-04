@@ -61,26 +61,26 @@ to make product(s) that are **_functional, fast, beautiful, useable and reliable
 3. Change connection String in Web.config.
 <img src="newfolder/ss1.png">
 4. Build the Project and start from Homepage.aspx .
-<img src="">
+<img src="newfolder/ss2.png">
 5. Create Seller Account and fill details and get signup.
-<img src="">
+<img src="newfolder/ss3.png">
 6. Update your Seller Profile.
-<img src="">
+<img src="newfolder/ss4.png">
 7. Add Item Category Type.
-<img src="">
+<img src="newfolder/ss5.png">
 8. Add Item that will show on homepage.
-<img src="">
+<img src="newfolder/ss6.png">
 9. See Order details and approve that orders also marked them as delivered.
-<img src="">
+<img src="newfolder/ss7.png">
 10. Create Buyer Account, fill necessary details and sign up.
-<img src="">
+<img src="newfolder/ss8.png">
 11. Go to items and you can see all the items available for sell but you can purchase only those item that is available in your city.
-<img src="">
-<img src="">
-<img src="">
+<img src="newfolder/ss9.png">
+<img src="newfolder/ss10.png">
+<img src="newfolder/ss11.png">
 12. Now You are able to place your order.
-<img src="">
-<img src="">
-<img src="">
+<img src="newfolder/ss12.png">
+<img src="newfolder/ss13.png">
+<img src="newfolder/ss14.png">
 13. You can  see the order details on Orders. 
-<img src=" ">
+<img src="newfolder/ss15.png">
