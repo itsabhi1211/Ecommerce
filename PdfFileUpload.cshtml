@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "PdfFileUpload";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<input type="file" id="FileUpload1" />
+<span id="lblError" style="color: red;"></span>
+<input type="button" id="btnUpload" value="Upload Files" />
+<script>
+    $(document).ready(function () {
+      
+
+        alert(uuidv4())
+
+
+
+        $('#btnUpload').click(function () {
+            if (ValidateExtension() == true) {
+                // Checking whether FormData is available in browser
+                if (window.FormData !== undefined) {
+
+                    var fileUpload = $("#FileUpload1").get(0);
+                    var files = fileUpload.files;
+
+                    // Create FormData object
+                    var fileData = new FormData();
+
+                    // Looping over all files and add it to FormData object
+                    for (var i = 0; i < files.length; i++) {
+                        fileData.append(files[i].name, files[i]);
+                    }
+
+                    // Adding one more key to FormData object
+                    fileData.append('username', 'Manas');
+
+                    $.ajax({
+                        url: '/FileUpload/FileUpload',
+                        type: "POST",
+                        contentType: false, // Not to set any content header
+                        processData: false, // Not to process data
+                        data: fileData,
+                        success: function (result) {
+                            alert(result);
+                        },
+                        error: function (err) {
+                            alert(err.statusText);
+                        }
+                    });
+                } else {
+                    alert("FormData is not supported.");
+                }
+            }
+
+        });
+    });
+
+
+    function ValidateExtension() {
+        var allowedFiles = [".doc", ".docx", ".pdf"];
+        var fileUpload = document.getElementById("FileUpload1");
+        var lblError = document.getElementById("lblError");
+        var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+(" + allowedFiles.join('|') + ")$");
+        if (!regex.test(fileUpload.value.toLowerCase())) {
+            lblError.innerHTML = "Please upload files having extensions: <b>" + allowedFiles.join(', ') + "</b> only.";
+            return false;
+        }
+        lblError.innerHTML = "";
+        return true;
+    }
+
+    function uuidv4() {
+
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+
+            var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+
+            return v.toString(16);
+
+        });
+
+    }
+
+
+</script>
